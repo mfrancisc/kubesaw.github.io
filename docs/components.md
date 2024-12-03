@@ -3,16 +3,16 @@ This page provides a brief description of each KubeSaw component.
 
 ## Host Operator
 The host-operator is _KubeSaw's control-plane_, is responsible for managing the users, spaces, notifications and monitoring the kubesaw instance.
-One of the resources managed by host operator is the UserSignup resource, which is the source of truth for all user accounts. All other user-related resources are created from the UserSignup.
+One of the resources managed by host operator is the UserSignup resource, which is the source of truth for all user accounts. All the other user-related resources are created from the UserSignup.
 
-At the moment, there can be only one host operator deployed per KubeSaw instance.
+At the moment, only one host operator can be deployed per KubeSaw instance.
 
 The source code is available here [host-operator](https://github.com/codeready-toolchain/host-operator)
 
 ## Member Operator
-The member operator is _KubeSaw's data-plane_, is responsible for provisioning and managing the user namespaces and all the configuration inside those namespaces.
+The member operator is _KubeSaw's data-plane_, which is responsible for provisioning and managing the user namespaces and all the configurations inside those namespaces.
 
-There can be multiple member operators deployed as part of the same KubeSaw instance, ideally there should be a member operator per each cluster dedicated to the user workload (member cluster).
+There can be multiple member operators deployed as part of the same KubeSaw instance, ideally there should be one member operator per each cluster, dedicated to the user workload (member cluster).
 
 The source code is available here [member-operator](https://github.com/codeready-toolchain/member-operator)
 
@@ -36,6 +36,6 @@ The proxy can help, in the case of a multi-cluster solution, with removing some 
 The source code for both registration-service and proxy is available here [registration-service](https://github.com/codeready-toolchain/registration-service)
 
 ## KSCTL
-ksctl is a command-line tool that helps you with managing your instance of KubeSaw.
+ksctl is a command-line tool that helps you manage your KubeSaw instance.
 
 The source code is available here [ksctl](https://github.com/kubesaw/ksctl)
