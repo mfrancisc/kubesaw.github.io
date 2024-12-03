@@ -31,7 +31,7 @@ the proxy infers the target cluster from the user information and the target wor
 
 Both Proxy and Registration-service are optional components and not required for having a fully functional KubeSaw instance.
 The registration service can be useful if your KubeSaw service requires a signup mechanism/frontend.
-The proxy can help, in the case of a multi-cluster solution, with removing some of the _cluster awareness_ and friction for the end users or clients interacting with the member clusters.
+The proxy can help, in the case of a multi-cluster solution, with removing some of the _cluster awareness_ and friction for the end users or clients interacting with the member clusters. Another key feature of the proxy is that it accepts SSO tokens, not kube tokens. This keeps authorization and authentication centralized, which can be managed from the identity provider (atm only Keycloak is supported).
 
 The source code for both registration-service and proxy is available here [registration-service](https://github.com/codeready-toolchain/registration-service)
 
