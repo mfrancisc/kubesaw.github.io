@@ -10,7 +10,7 @@ At the moment, only one host operator can be deployed per KubeSaw instance.
 The source code is available here [host-operator](https://github.com/codeready-toolchain/host-operator)
 
 ## Member Operator
-The member operator is _KubeSaw's data-plane_, is responsible for provisioning and managing the user namespaces and all the configuration inside those namespaces.
+The member operator is _KubeSaw's data-plane_, which is responsible for provisioning and managing the user namespaces and all the configurations inside those namespaces.
 
 There can be multiple member operators deployed as part of the same KubeSaw instance, ideally there should be a member operator per each cluster dedicated to the user workload (member cluster).
 
