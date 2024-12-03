@@ -12,7 +12,7 @@ The source code is available here [host-operator](https://github.com/codeready-t
 ## Member Operator
 The member operator is _KubeSaw's data-plane_, which is responsible for provisioning and managing the user namespaces and all the configurations inside those namespaces.
 
-There can be multiple member operators deployed as part of the same KubeSaw instance, ideally there should be a member operator per each cluster dedicated to the user workload (member cluster).
+There can be multiple member operators deployed as part of the same KubeSaw instance, ideally there should be one member operator per each cluster, dedicated to the user workload (member cluster).
 
 The source code is available here [member-operator](https://github.com/codeready-toolchain/member-operator)
 
