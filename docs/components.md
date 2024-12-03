@@ -5,7 +5,7 @@ This page provides a brief description of each KubeSaw component.
 The host-operator is _KubeSaw's control-plane_, is responsible for managing the users, spaces, notifications and monitoring the kubesaw instance.
 One of the resources managed by host operator is the UserSignup resource, which is the source of truth for all user accounts. All other user-related resources are created from the UserSignup.
 
-At the moment, there can be only one host operator deployed per KubeSaw instance.
+At the moment, only one host operator can be deployed per KubeSaw instance.
 
 The source code is available here [host-operator](https://github.com/codeready-toolchain/host-operator)
 
