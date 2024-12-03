@@ -36,6 +36,6 @@ The proxy can help, in the case of a multi-cluster solution, with removing some 
 The source code for both registration-service and proxy is available here [registration-service](https://github.com/codeready-toolchain/registration-service)
 
 ## KSCTL
-ksctl is a command-line tool that helps you with managing your instance of KubeSaw.
+ksctl is a command-line tool that helps you manage your KubeSaw instance.
 
 The source code is available here [ksctl](https://github.com/kubesaw/ksctl)
