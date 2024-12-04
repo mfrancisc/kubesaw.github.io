@@ -5,14 +5,12 @@ This page provides a brief description of each KubeSaw component.
 The host-operator is _KubeSaw's control-plane_, which is responsible for managing the users, spaces, notifications and monitoring the KubeSaw instance.
 One of the resources managed by host operator is the UserSignup resource, which is the source of truth for all user accounts. All the other user-related resources are created from the UserSignup.
 
-At the moment, only one host operator can be deployed per KubeSaw instance.
-
 The source code is available here [host-operator](https://github.com/codeready-toolchain/host-operator)
 
 ## Member Operator
 The member operator is _KubeSaw's data-plane_, which is responsible for provisioning and managing the user namespaces and all the configurations inside those namespaces.
 
-There can be multiple member operators deployed as part of the same KubeSaw instance, ideally there should be one member operator per each cluster, dedicated to the user workload (member cluster).
+There can be multiple member operators deployed as part of the same KubeSaw instance. Member operators are usually deployed per-cluster (member cluster) but can even co-exist in the same cluster.
 
 The source code is available here [member-operator](https://github.com/codeready-toolchain/member-operator)
 
@@ -24,8 +22,7 @@ The Registration Service application makes use of third party libraries such as 
 and Kubernetes client libraries (for interacting with the Kubernetes API) among others.
 
 ### Proxy
-The Proxy is part of the registration service application deployment,
-basically it's another set of REST endpoints implemented using the echo framework.
+The Proxy is part of the registration service application deployment.
 It can be used in a multi-cluster environment to forward requests without the need to specify the cluster context,
 the proxy infers the target cluster from the user information and the target workspace/namespace of the request.
 
@@ -36,6 +33,6 @@ The proxy can help, in the case of a multi-cluster solution, with removing some 
 The source code for both registration-service and proxy is available here [registration-service](https://github.com/codeready-toolchain/registration-service)
 
 ## KSCTL
-ksctl is a command-line tool that helps you manage your KubeSaw instance.
+ksctl is a command-line tool that helps you manage your KubeSaw instance. It provides commands for managing the clusters, spaces and users in KubeSaw.
 
 The source code is available here [ksctl](https://github.com/kubesaw/ksctl)
